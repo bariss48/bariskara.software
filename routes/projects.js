@@ -19,9 +19,15 @@ router.post("/",isLoggedIn, async (req,res) => {
         title: req.body.title,
         intro: req.body.intro,
         description: req.body.description,
+        description_2: req.body.description_2,
+        code: req.body.code,
+        code_2: req.body.code_2,
+        read_min : req.body.read_min,
         author:req.body.author,
         date:req.body.date,
         genre: req.body.genre,
+        github_link: req.body.github_link,
+        pdf_link: req.body.pdf_link,
         image_link: req.body.image_link,
     } 
      try {
@@ -85,8 +91,15 @@ router.post("/:id/edit", async (req,res) => {
             description: req.body.description,
             author:req.body.author,
             date:req.body.date,
+            description_2: req.body.description_2,
+            code: req.body.code,
+            code_2: req.body.code_2,
+            read_min : req.body.read_min,
+            github_link: req.body.github_link,
+            pdf_link: req.body.pdf_link,
             genre,
-            image_link: req.body.image_link
+            image_link: req.body.image_link,
+            image_link_2: req.body.image_link_2
         }
         try {
           const project = await Project.findByIdAndUpdate(req.params.id, projectBody, {new: true}).exec();

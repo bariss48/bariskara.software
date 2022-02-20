@@ -29,12 +29,36 @@
            <input type="text" class="form-control"  name="title" value="<%= project.title %>">
          </div>
          <div class="form-group">
+          <label for="read_min">Read-Min</label>
+          <input type="text" class="form-control"  name="read_min" placeholder="read_min" value="<%= project.read_min %>">
+         </div>
+         <div class="form-group">
+          <label for="github_link">Github Link</label>
+          <input type="text" class="form-control"  name="github_link" placeholder="Github_Link" value="<%= project.github_link %> ">
+         </div>
+         <div class="form-group">
+          <label for="github_link">Pdf Link</label>
+          <input type="text" class="form-control"  name="pdf_link" placeholder="Pdf_Link" value="<%= project.pdf_link %> ">
+         </div>
+         <div class="form-group">
+          <label for="description">Description-2 </label>
+          <textarea class="form-control" name="description_2" id="text" rows="8" cols="80" placeholder="Description-2 text here.." value="<%= project.description_2 %>" required></textarea>
+         </div>
+         <div class="form-group">
+          <label for="description">Code Area</label>
+          <textarea class="form-control" name="code" id="text" rows="8" cols="80" placeholder="Code Area.." value="<%= project.code %>"required></textarea>
+         </div>
+         <div class="form-group">
+          <label for="description">Code Area-2</label>
+          <textarea class="form-control" name="code_2" id="text" rows="8" cols="80" placeholder="Code Area-2 text here.." value="<%= project.code_2 %>" required></textarea>
+         </div>
+         <div class="form-group">
           <label for="intro" >Intro</label>
           <input type="text" class="form-control"  name="intro" value="<%= project.intro %>">
         </div>
          <div class="form-group">
           <label for="description" >Description</label>
-          <textarea class="form-control" name="description" id="text" rows="8" cols="80" placeholder="Description text here.." value="blog.description" required></textarea>
+          <textarea class="form-control" name="description" id="text" rows="8" cols="80" placeholder="Description text here.." value="<%= project.description %>" required></textarea>
          </div>
         <div class="form-group">
           <label for="author" >Author</label>
@@ -53,11 +77,21 @@
                  <option <%= project.genre === 'JavaScript' ? 'selected' : '' %>>JavaScript</option>
                  <option <%= project.genre === 'Java' ? 'selected' : '' %>>Java</option>
                  <option <%= project.genre === 'Just Chatting' ? 'selected' : '' %>>Just Chatting</option>
+                 <option <%= project.genre === 'C' ? 'selected' : '' %> >C</option>
+                 <option <%= project.genre === 'C++' ? 'selected' : '' %> >C++</option>
+                 <option <%= project.genre === 'Python' ? 'selected' : '' %>>Python</option>
+                 <option <%= project.genre === 'Haskell' ? 'selected' : '' %>>Haskell</option>
+                 <option <%= project.genre === 'Lisp' ? 'selected' : '' %>>Lisp</option>
+                 <option <%= project.genre === 'Eiffel' ? 'selected' : '' %>>Eiffel</option>
                 </select>
               </div>
               <div class="form-group">
                 <label for="image" >Link to image</label>
                 <input type="text" class="form-control"  name="image_link" value="<%= project.image_link %>">
+              </div>
+              <div class="form-group">
+                <label for="image" >Image Content</label>
+                <input type="text" class="form-control"  name="image_link_2" value="<%= project.image_link_2 %>">
               </div>
          <button type="submit" class="btn btn-warning">Update</button>
        </form>
