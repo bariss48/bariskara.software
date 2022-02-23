@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const enforce = require('express-sslify');
+//const enforce = require('express-sslify');
 //routes
 const blogs_route = require('./routes/blogs');
 const auth_route = require('./routes/auth');
@@ -23,7 +23,7 @@ dotenv.config({ path: './config/config.env' });
 
 connect_db();
 
-app.use(enforce.HTTPS({trustProtoHeader: true}));
+//app.use(enforce.HTTPS({trustProtoHeader: true}));
 app.use(body_parser.json());
 app.use(body_parser.urlencoded({ extended : true }));
 
