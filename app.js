@@ -23,7 +23,7 @@ dotenv.config({ path: './config/config.env' });
 
 connect_db();
 
-app.use(enforce.HTTPS({trustProtoHeader: true}));
+//app.use(enforce.HTTPS({trustProtoHeader: true}));
 app.use(body_parser.json());
 app.use(body_parser.urlencoded({ extended : true }));
 
